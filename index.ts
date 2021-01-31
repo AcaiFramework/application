@@ -22,8 +22,9 @@ const server = new Server({
 });
 
 // get configs
-import "./config/provider.ts";
-import "./config/middleware.ts";
+await import ("./config/database.ts");
+await import ("./config/provider.ts");
+await import ("./config/middleware.ts");
 
 // fetch into server
 server.addProviders(config.config.providers 	as ProviderInterface[]);

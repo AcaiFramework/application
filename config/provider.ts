@@ -1,10 +1,15 @@
 // Packages
 import config from "config/mod.ts";
 
+// Providers
+import RouteProvider 	from "../app/providers/route.provider.ts";
+import DatabaseProvider from "../app/providers/database.provider.ts";
+
 // -------------------------------------------------
 // List of providers
 // -------------------------------------------------
 
 config.setConfig("providers", [
-	(await import("../app/providers/route.provider.ts")).default,
+	RouteProvider,
+	DatabaseProvider,
 ]);

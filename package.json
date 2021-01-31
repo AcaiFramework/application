@@ -1,0 +1,14 @@
+{
+  "name": "acai",
+  "version": "1.0.0",
+  "description": "Default boilerplate application for the Açai framework",
+  "private": true,
+  "scripts": {
+	  "start": "deno run --import-map=package.json -A --unstable ./index.ts"
+  },
+  "imports": {
+	  "server/": "../modules/server/",
+	  "router/": "https://deno.land/x/acai_router@1.0.0/",
+	  "config/": "https://deno.land/x/acai_config@0.1.3/"
+  }
+}

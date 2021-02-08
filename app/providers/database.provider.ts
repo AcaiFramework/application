@@ -1,6 +1,6 @@
 // Packages
-import config 					from "config/mod.ts";
-import { addQuery, setDefault } from "query/mod.ts";
+import config 					from "@acai/config";
+import { addQuery, setDefault } from "@acai/query";
 
 // interfaces
 interface DatabaseConfigInterface {

@@ -1,5 +1,5 @@
 // Packages
-import config from "config/mod.ts";
+import config from "@acai/config";
 
 // -------------------------------------------------
 // Database configuration

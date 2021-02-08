@@ -1,0 +1,15 @@
+{
+	"compilerOptions": {
+	  "target": "ES2015",
+	  "module": "commonjs",
+	  "strict": true,
+	  "experimentalDecorators": true,
+	  "noImplicitAny": false,
+	  "outDir": "dist",
+	  "sourceMap": true,
+	  "declaration": true,
+	  "declarationDir": "dist/types",
+	  "removeComments": true,
+	}
+  }
+  

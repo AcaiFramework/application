@@ -1,9 +1,10 @@
 // Packages
-import config from "config/mod.ts";
+import config from "@acai/config";
 
 // Providers
-import RouteProvider 	from "../app/providers/route.provider.ts";
-import DatabaseProvider from "../app/providers/database.provider.ts";
+import RouteProvider 		from "../app/providers/route.provider";
+import DatabaseProvider 	from "../app/providers/database.provider";
+import ValidatorProvider 	from "../app/providers/validator.provider";
 
 // -------------------------------------------------
 // List of providers
@@ -12,4 +13,5 @@ import DatabaseProvider from "../app/providers/database.provider.ts";
 config.setConfig("providers", [
 	RouteProvider,
 	DatabaseProvider,
+	ValidatorProvider,
 ]);

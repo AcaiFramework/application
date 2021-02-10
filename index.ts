@@ -23,14 +23,14 @@ async function main () {
 	});
 	
 	// get configs
-	await import ("./config/database");
+	// await import ("./config/database");
 	await import ("./config/provider");
 	await import ("./config/middleware");
 	
 	// fetch into server
 	server.addProviders(config.config.providers 	as ProviderInterface[]);
 	server.addMiddlewares(config.config.middleware 	as Record<string, MiddlewareType>);
-	server.addMiddlewares(config.config.global 		as Record<string, MiddlewareType>, true);
+	server.addGlobals(config.config.global 			as MiddlewareType[]);
 	
 	// -------------------------------------------------
 	// Run server

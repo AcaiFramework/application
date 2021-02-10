@@ -4,15 +4,17 @@
  "description": "Default boilerplate application for the Açai framework",
  "private": true,
  "scripts": {
-  "start": ""
+  "start": "ts-node-dev ./index.ts"
  },
  "dependencies": {
-  "@acai/config": "^0.1.0",
-  "@acai/router": "^0.1.2",
-  "@acai/server": "file:../modules/server",
+  "@acai/config": "^0.1.1",
+  "@acai/router": "^0.1.3",
+  "@acai/server": "^0.1.0",
   "@acai/validator": "^0.1.0"
  },
  "devDependencies": {
-  "@types/node": "^14.14.25"
+  "@types/node": "^14.14.25",
+  "ts-node-dev": "^1.1.1",
+  "typescript": "^4.1.4"
  }
 }

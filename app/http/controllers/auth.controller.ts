@@ -11,6 +11,6 @@ export default class AuthController {
 	public register(request: Request) {
 		const { validated } = new RegisterValidator(request.fields);
 		
-		return new User(validated);
+		return new User();
 	}
 }

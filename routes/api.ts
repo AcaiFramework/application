@@ -1,12 +1,12 @@
 // Packages
 import { route } 	from "@acai/router";
 
-route.get("/", "test.controller@test");
-
 // auth
-route.post("/register", "auth.controller@register");
-route.post("/login", 	"auth.controller@login");
-route.post("/recover", 	"auth.controller@recover");
+route.get("/users",			"auth.controller@index");
+route.get("/users/{id}",	"auth.controller@show");
+route.post("/register", 	"auth.controller@register");
+route.post("/login", 		"auth.controller@login");
+route.post("/recover", 		"auth.controller@recover");
 
 // auth user
 route.options({middleware: ["auth"]}, () => {

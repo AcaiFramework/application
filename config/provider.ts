@@ -3,7 +3,7 @@ import config from "@acai/config";
 
 // Providers
 import RouteProvider 		from "../app/providers/route.provider";
-// import DatabaseProvider 	from "../app/providers/database.provider";
+import DatabaseProvider 	from "../app/providers/database.provider";
 import ValidatorProvider 	from "../app/providers/validator.provider";
 
 // -------------------------------------------------
@@ -12,6 +12,6 @@ import ValidatorProvider 	from "../app/providers/validator.provider";
 
 config.setConfig("providers", [
 	RouteProvider,
-	// DatabaseProvider,
+	DatabaseProvider,
 	ValidatorProvider,
 ]);

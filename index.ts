@@ -17,15 +17,16 @@ async function main () {
 	// Prepare server
 	// -------------------------------------------------
 	
-	const server = new Server({
-		filePrefix: "app/http/controllers",
-		viewPrefix: "app/views",
-	});
-	
 	// get configs
-	// await import ("./config/database");
+	await import ("./config/paths");
+	await import ("./config/database");
 	await import ("./config/provider");
 	await import ("./config/middleware");
+	
+	const server = new Server({
+		filePrefix: config.config.paths.controllers,
+		viewPrefix: config.config.paths.view,
+	});
 	
 	// fetch into server
 	server.addProviders(config.config.providers 	as ProviderInterface[]);

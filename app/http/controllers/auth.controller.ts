@@ -1,5 +1,4 @@
 // Packages
-import query from "@acai/query";
 import Request from "../../../interfaces/Request";
 
 // Models
@@ -24,7 +23,7 @@ export default class AuthController {
 	}
 
 	public async show (request: Request) {
-		const user = await User.find(request.params.id);
+		const user = await User.findOrFail(request.params.id as string);
 
 		return Presenter.present(user);
 	}

@@ -8,11 +8,11 @@
   },
   "dependencies": {
     "@acai/config": "^0.1.1",
-    "@acai/model": "^0.1.1",
-    "@acai/presenter": "^0.1.0",
+    "@acai/model": "0.1.8",
     "@acai/query": "^0.3.7",
     "@acai/router": "^0.1.3",
     "@acai/server": "^0.1.0",
+    "@acai/utils": "^0.1.1",
     "@acai/validator": "^0.1.0"
   },
   "devDependencies": {

@@ -1,10 +1,10 @@
 // Packages
-import BasePresenter from "@acai/presenter";
+import { Presenter } from "@acai/utils";
 
 // Models
 import User from "../models/user";
 
-export default class Presenter extends BasePresenter {
+export default class UserPresenter extends Presenter {
 	public async format (model: User) {
 		return {
 			id: 			model.id,

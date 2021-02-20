@@ -11,7 +11,8 @@ import Presenter 	from "../../presenters/user.presenter";
 // Validators
 import RegisterValidator 	from "../../validators/register.validator";
 import LoginValidator 		from "../../validators/login.validator";
-import { response } from "@acai/server";
+
+// Exceptions
 import AuthFailException from "../../exceptions/authFail";
 
 export default class AuthController {

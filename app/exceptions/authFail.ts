@@ -16,7 +16,7 @@ export default class AuthFailException extends CustomException {
 					message: "User does not exist or password does not match"
 				},
 				status: 403,
-			})
+			});
 		}
 
 		return response({

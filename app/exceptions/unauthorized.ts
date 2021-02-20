@@ -15,13 +15,13 @@ export default class UnauthorizedException extends CustomException {
 				data: {
 					message: "Unauthorized"
 				},
-				status: 403,
+				status: 401,
 			})
 		}
 
 		return response({
 			data: "<h1>Unauthorized</h1>",
-			status: 403,
+			status: 401,
 		});
 	}
 }

@@ -11,11 +11,11 @@
     ts-node "^9.1.1"
 
 "@acai/model@^0.3.7":
-  version "0.3.9"
-  resolved "https://registry.yarnpkg.com/@acai/model/-/model-0.3.9.tgz#fcc8fe10ec4947b1a519dec90553599e85308fd6"
-  integrity sha512-FH4xeBTZkkG2w4i9wWuiwz/Db+Uv51Br0nxvX5lOTKdqq3JRQHk+TkfVncn3NcEx4ODd0eYWGVuIMw0TEANd+w==
+  version "0.3.10"
+  resolved "https://registry.yarnpkg.com/@acai/model/-/model-0.3.10.tgz#94bd6fd160fec2e26fbbdc79c36bd85e680a54c6"
+  integrity sha512-7DGs2AKATIiG0D9lvUMUWLFESVo+++pS/mBG/+J2CbXXhqLnVjnHosJtIGJmmaU3x4FypjZkbdXX7cvo6sjhrw==
   dependencies:
-    "@acai/query" "*"
+    "@acai/query" "^0.3.14"
     "@acai/utils" "^0.1.1"
     bcrypt "^5.0.0"
     luxon "^1.26.0"
@@ -23,10 +23,19 @@
   optionalDependencies:
     "@acai/config" "^0.1.2"
 
-"@acai/query@*", "@acai/query@^0.3.13":
-  version "0.3.13"
-  resolved "https://registry.yarnpkg.com/@acai/query/-/query-0.3.13.tgz#73a5b6874ae29fb9122c35e6ea987821391d8fee"
-  integrity sha512-aR8ZiL97/agM6byKqm6D3wb9UfBuZE8MufRllSmQK9WjZohLETACnMSr2nhQP0ZWpAB/Hfq8v/7bYzu6d7g06A==
+"@acai/query@^0.3.14":
+  version "0.3.14"
+  resolved "https://registry.yarnpkg.com/@acai/query/-/query-0.3.14.tgz#a4d70fdb7060fd038c8c117aadff276ff971fc07"
+  integrity sha512-dqzu7XYXr6x1JxvvrQkEfaWmVMc9GN9Q0QekdKQ1ayomfMd/DG/VIZwNB9v82GmuxeehejkVRhhw65p4De5czw==
+  dependencies:
+    mysql2 "^2.2.5"
+  optionalDependencies:
+    pg "^8.5.1"
+
+"@acai/query@^0.3.16":
+  version "0.3.16"
+  resolved "https://registry.yarnpkg.com/@acai/query/-/query-0.3.16.tgz#e4a31ef8d221af2a129723530cd60e0ec5292bc6"
+  integrity sha512-5VLUxeOSe3qPFkl7tanJNf5/H3bh7XoJpn3+gGy3GYPLlu68iBVJY+7dR0IYhPPMWYVjWl3C4gjjI25RpNOC7w==
   dependencies:
     mysql2 "^2.2.5"
   optionalDependencies:
@@ -56,14 +65,7 @@
   dependencies:
     ts-node "^9.1.1"
 
-"@acai/utils@^0.2.0":
-  version "0.2.1"
-  resolved "https://registry.yarnpkg.com/@acai/utils/-/utils-0.2.1.tgz#ad4b5a2f569e699600babaf1862a8e0f8d9a60cd"
-  integrity sha512-rSVafKSSxN7ip0RzOlfTk3j5CG+xEomGxySc8SFM0QG/d6rRUTgeLj/lZU9Htb91jfMlM9JSzqQ/zo2o+0aBRw==
-  dependencies:
-    ts-node "^9.1.1"
-
-"@acai/utils@^0.2.4":
+"@acai/utils@^0.2.0", "@acai/utils@^0.2.4":
   version "0.2.4"
   resolved "https://registry.yarnpkg.com/@acai/utils/-/utils-0.2.4.tgz#b2eac60b422994f7064fac76ea996ad25f2f50b0"
   integrity sha512-+PcAlDLReByxum7yoJ/mDIXuyKzMaQyldzQmS/REYtkhAzqyC3zDig1HI91t8ppAVv8DISkBti6IPKuvKgylEA==

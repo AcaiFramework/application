@@ -9,7 +9,7 @@
   "dependencies": {
     "@acai/config": "^0.1.1",
     "@acai/model": "^0.3.7",
-    "@acai/query": "^0.3.13",
+    "@acai/query": "^0.3.16",
     "@acai/router": "^0.1.3",
     "@acai/server": "^0.2.5",
     "@acai/utils": "^0.2.4",

@@ -15,13 +15,13 @@ export default class MalformedException extends CustomException {
 				data: {
 					message: "Malformed request: " + this.message
 				},
-				status: 401,
+				status: 400,
 			})
 		}
 
 		return response({
 			data: `<h1>Malformed request: ${this.message}</h1>`,
-			status: 401,
+			status: 400,
 		});
 	}
 }

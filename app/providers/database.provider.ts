@@ -1,6 +1,7 @@
 // Packages
 import config 					from "@acai/config";
 import { addQuery, setDefault } from "@acai/query";
+import { getModels }			from "@acai/model";
 import * as fs 					from "fs";
 import * as path 				from "path";
 
@@ -70,17 +71,20 @@ export default class DatabaseProvider {
 			await addQuery(name, type, dbconfig);
 		}
 
-		// run auto migrations
+		// get model files
 		const files = fs.readdirSync(config.config.paths.models, {
 			encoding: "utf-8",
 			withFileTypes: true,
 		});
 
-		// load all routes
+		// load all models
 		for await (const dirEntry of files) {
 			if (dirEntry.isFile()) {
 				await import (path.join("../../",config.config.paths.models, dirEntry.name));
 			}
 		}
+
+		// run auto migrations
+		await Promise.all(getModels().map(i => i.runMigration()));
 	}
 }

@@ -2,7 +2,7 @@
 import config from "@acai/config";
 
 // Middlewares
-import AuthMiddleware from "../app/http/middlewares/auth.middleware";
+import AuthMiddleware from "../app/middlewares/auth.middleware";
 
 // -------------------------------------------------
 // Global middlewares

@@ -6,7 +6,7 @@ import config from "@acai/config";
 // -------------------------------------------------
 
 config.setConfig("paths", {
-	"controllers"	: "app/http/controllers",
+	"controllers"	: "app/controllers/http",
 	"views"			: "app/views",
 	"routes"		: "routes",
 	"models"		: "app/models",

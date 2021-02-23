@@ -1,0 +1,7 @@
+{
+	"name": "model",
+	"targetPath": "app/models",
+	"renameToNameFiles": [
+		"index.ts"
+	]
+}

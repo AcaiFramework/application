@@ -11,5 +11,8 @@
     "declarationDir": "dist/types",
     "removeComments": true,
     "strictNullChecks": false
-  }
+  },
+  "exclude": [
+	  "stubs/**/*"
+  ]
 }

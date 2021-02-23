@@ -1,0 +1,7 @@
+{
+	"name": "exception",
+	"targetPath": "app/exceptions",
+	"renameToNameFiles": [
+		"index.ts"
+	]
+}

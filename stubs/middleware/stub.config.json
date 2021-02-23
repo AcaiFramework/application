@@ -1,0 +1,7 @@
+{
+	"name": "middleware",
+	"targetPath": "app/middlewares",
+	"renameToNameFiles": [
+		"index.ts"
+	]
+}

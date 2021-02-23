@@ -1,0 +1,7 @@
+{
+	"name": "provider",
+	"targetPath": "app/providers",
+	"renameToNameFiles": [
+		"index.ts"
+	]
+}

@@ -1,0 +1,7 @@
+{
+	"name": "validator",
+	"targetPath": "app/validators",
+	"renameToNameFiles": [
+		"index.ts"
+	]
+}

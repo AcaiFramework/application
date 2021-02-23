@@ -1,0 +1,7 @@
+{
+	"name": "presenter",
+	"targetPath": "app/presenters",
+	"renameToNameFiles": [
+		"index.ts"
+	]
+}

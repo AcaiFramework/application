@@ -58,6 +58,14 @@
   optionalDependencies:
     "@acai/router" "*"
 
+"@acai/stubber@^0.1.0":
+  version "0.1.0"
+  resolved "https://registry.yarnpkg.com/@acai/stubber/-/stubber-0.1.0.tgz#f8c22dd4f63b71a4007dbe19dedbbba711e229ec"
+  integrity sha512-TrpA7qWMCuUbbCrCFoaRCTFfJPWHtFantw/Uuca+d/C+daXEEhxlKqJHxuqoueHYJOnMNcM1ge2yVBRSLxgZGA==
+  dependencies:
+    glob "^7.1.6"
+    ts-node "^9.1.1"
+
 "@acai/utils@^0.1.1":
   version "0.1.1"
   resolved "https://registry.yarnpkg.com/@acai/utils/-/utils-0.1.1.tgz#dfa17e4db266fe42ef9227805fa9b58dad2e5644"

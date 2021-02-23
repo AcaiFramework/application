@@ -1,0 +1,7 @@
+{
+	"name": "controller",
+	"targetPath": "app/controllers/http",
+	"renameToNameFiles": [
+		"index.ts"
+	]
+}

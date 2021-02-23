@@ -4,7 +4,8 @@
   "description": "Default boilerplate application for the Açai framework",
   "private": true,
   "scripts": {
-    "start": "ts-node-dev --files ./index.ts"
+    "start": "ts-node-dev --files ./index.ts",
+	"stub": "ts-node node_modules/@acai/stubber/dist/index.js"
   },
   "dependencies": {
     "@acai/config": "^0.1.1",
@@ -12,6 +13,7 @@
     "@acai/query": "^0.3.16",
     "@acai/router": "^0.1.3",
     "@acai/server": "^0.2.5",
+    "@acai/stubber": "^0.1.0",
     "@acai/utils": "^0.2.4",
     "@acai/validator": "^0.1.0",
     "luxon": "^1.26.0",

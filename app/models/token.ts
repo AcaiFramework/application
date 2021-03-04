@@ -1,6 +1,9 @@
 // Packages
-import { DateTime }						from "luxon";
-import { Model, Field, Table, Hasher } 	from "@acai/model";
+import { DateTime }							from "luxon";
+import { Model, Field, Table, Relation } 	from "@acai/model";
+
+// Models
+import User from "./user";
 
 @Table("link_token")
 export default class Token extends Model {
@@ -8,11 +11,15 @@ export default class Token extends Model {
 	public id: string;
 
 	@Field()
-	public id_user: string;
-
-	@Field()
 	public token: string;
 
 	@Field("date")
 	public date_valid: DateTime;
+
+	// -------------------------------------------------
+	// relations
+	// -------------------------------------------------
+
+	@Field.belongsTo(() => User, "id_user")
+	public user: Relation<User, "belongsTo">;
 }

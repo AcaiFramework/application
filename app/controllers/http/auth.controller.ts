@@ -1,9 +1,9 @@
 // Packages
-import { DateTime } from "luxon";
+import { DateTime } 		from "luxon";
+import { CustomException } 	from "@acai/utils";
 
 // Models
 import User		from "../../models/user";
-import Token	from "../../models/token";
 
 // Presenters
 import Presenter 	from "../../presenters/user.presenter";
@@ -23,6 +23,11 @@ export default class AuthController {
 	public async register(request: AppRequest) {
 		const { validated } = new RegisterValidator(request.fields);
 
+		// check if email is already used
+		if (await User.query().where("email", validated.email as string).first()) {
+			throw new CustomException("validation", "Validation error", {errors: {email: [ "email already registered in the system" ]}});
+		}
+		
 		// create user
 		const user 			= new User(validated);
 		user.username 		= validated.name as string;
@@ -31,12 +36,11 @@ export default class AuthController {
 		await user.save();
 
 		// create login token
-		const token 		= new Token();
-		token.id_user		= user.id;
+		const token 		= await user.token.findOrCreate();
 		token.date_valid 	= DateTime.now().plus({ days: 2 });
 		token.token			= this.generateToken();
 		await token.save();
-
+		
 		return Presenter.present(user, {token: token.token});
 	}
 
@@ -54,11 +58,10 @@ export default class AuthController {
 		}
 
 		// delete last token
-		await Token.query().where("id_user", user.id).delete();
+		await user.token.delete();
 
 		// create new token
-		const token 		= new Token();
-		token.id_user		= user.id;
+		const token 		= await user.token.findOrCreate();
 		token.date_valid 	= DateTime.now().plus({ days: 2 });
 		token.token			= this.generateToken();
 		await token.save();

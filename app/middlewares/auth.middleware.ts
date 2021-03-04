@@ -32,12 +32,12 @@ export default async function AuthMiddleware (request: AppRequest, next: (r: App
 	}
 
 	// check token validity
-	if (token.date_valid.diffNow() < 0) {
+	if (token.date_valid.diffNow().milliseconds < 0) {
 		throw new UnauthorizedException();
 	}
 
 	// fetch user from token
-	const user = await User.find(token.id_user as string);
+	const user = await token.user.get();
 
 	return next({...request, user});
 } 

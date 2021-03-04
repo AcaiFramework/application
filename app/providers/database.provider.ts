@@ -1,9 +1,9 @@
 // Packages
-import config 					from "@acai/config";
-import { addQuery, setDefault } from "@acai/query";
-import { getModels }			from "@acai/model";
-import * as fs 					from "fs";
-import * as path 				from "path";
+import config 							from "@acai/config";
+import query, { addQuery, setDefault } 	from "@acai/query";
+import { getModels }					from "@acai/model";
+import * as fs 							from "fs";
+import * as path 						from "path";
 
 // interfaces
 interface DatabaseConfigInterface {
@@ -85,6 +85,7 @@ export default class DatabaseProvider {
 		}
 
 		// run auto migrations
-		await Promise.all(getModels().map(i => i.runMigration()));
+		getModels().map(i => i.addMigration())
+		await query().runMigrations();
 	}
 }

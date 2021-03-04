@@ -5,17 +5,17 @@
   "private": true,
   "scripts": {
     "start": "ts-node-dev --files ./index.ts",
-	"stub": "ts-node node_modules/@acai/stubber/dist/index.js"
+    "stub": "ts-node node_modules/@acai/stubber/dist/index.js"
   },
   "dependencies": {
-    "@acai/config": "^0.1.1",
-    "@acai/model": "^0.3.7",
-    "@acai/query": "^0.3.16",
-    "@acai/router": "^0.1.3",
-    "@acai/server": "^0.2.5",
+    "@acai/config": "^0.1.2",
+    "@acai/model": "^0.5.6",
+    "@acai/query": "^0.4.2",
+    "@acai/router": "^0.1.5",
+    "@acai/server": "^0.2.9",
     "@acai/stubber": "^0.1.0",
     "@acai/utils": "^0.2.4",
-    "@acai/validator": "^0.1.0",
+    "@acai/validator": "^0.1.2",
     "luxon": "^1.26.0",
     "mysql2": "^2.2.5"
   },

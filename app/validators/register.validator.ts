@@ -2,7 +2,7 @@
 import Validator from "@acai/validator";
 
 export default class RegisterValidator extends Validator {
-	protected getSchema () {
+	public getSchema () {
 		return {
 			name	: [ "required", "string" ],
 			email	: [ "required", "email" ],

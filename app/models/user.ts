@@ -1,6 +1,9 @@
 // Packages
-import { DateTime }						from "luxon";
-import { Model, Field, Table, Hasher } 	from "@acai/model";
+import { DateTime }									from "luxon";
+import { Model, Field, Table, Hasher, Relation } 	from "@acai/model";
+
+// Models
+import Token from "./token";
 
 @Table("data_user")
 export default class User extends Model {
@@ -27,4 +30,11 @@ export default class User extends Model {
 
 	@Field("date")
 	public date_updated: DateTime;
+
+	// -------------------------------------------------
+	// relations
+	// -------------------------------------------------
+
+	@Field.hasOne(() => Token, "id_user")
+	public token: Relation<Token, "hasOne">;
 }
